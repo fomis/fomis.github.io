@@ -182,11 +182,110 @@ btf.addGlobalFn('pjaxSend', () => {
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-11-24T10:24:17.412Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/szpu.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By 陈冠宏</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3-b2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.3-b2"></script><script src="/js/main.js?v=5.5.3-b2"></script><div class="js-pjax"></div><!-- 正确的CDN链接 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-11-24T12:36:43.918Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/szpu.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By 陈冠宏</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3-b2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.3-b2"></script><script src="/js/main.js?v=5.5.3-b2"></script><div class="js-pjax"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
 
-<!-- 播放器 -->
-<meting-js server="netease" type="song" id="2737401613" fixed="true" mini="true"></meting-js>
+<!-- 使用更可靠的热门歌单ID -->
+<meting-js
+  server="netease"
+  type="playlist"
+  id="17476688500"           # 学习专注歌单（通常可用）
+  fixed="true"
+  mini="true"
+  autoplay="false"
+  theme="#006BB6"
+  volume="0.3"
+  list-folded="true"
+></meting-js>
+
+<style>
+.aplayer.aplayer-fixed {
+  bottom: 20px !important;
+  right: 20px !important;
+  left: auto !important;
+  z-index: 9999 !important;
+  max-width: 400px !important;
+  width: auto !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15) !important;
+  background: transparent !important; /* 确保背景透明 */
+}
+
+.aplayer.aplayer-fixed .aplayer-body {
+  width: 100% !important;
+  max-width: 400px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  background: #fff !important; /* 确保主体背景为白色 */
+}
+
+/* 最小化状态修复 */
+.aplayer.aplayer-fixed.aplayer-narrow {
+  width: 66px !important;
+  height: 66px !important;
+  border-radius: 8px !important; /* 确保最小化时也有圆角 */
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  width: 66px !important;
+  height: 66px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  background: #fff !important;
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-pic {
+  width: 66px !important;
+  height: 66px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+/* 列表样式 */
+.aplayer.aplayer-fixed .aplayer-list {
+  border-radius: 0 0 8px 8px !important;
+  overflow: hidden !important;
+  max-height: 300px !important;
+  background: #fff !important;
+}
+
+/* 确保播放器内容正确显示 */
+.aplayer .aplayer-info {
+  border-radius: 8px !important;
+  background: #fff !important;
+}
+
+.aplayer .aplayer-lrc {
+  border-radius: 0 0 8px 8px !important;
+  background: #fff !important;
+}
+
+/* 修复播放器各部分的边距和填充 */
+.aplayer * {
+  box-sizing: border-box !important;
+}
+
+.aplayer .aplayer-pic {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 确保最小化时没有白边 */
+.aplayer.aplayer-narrow .aplayer-pic {
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 隐藏不需要的元素 */
+.aplayer.aplayer-narrow .aplayer-info,
+.aplayer.aplayer-narrow .aplayer-list,
+.aplayer.aplayer-narrow .aplayer-lrc {
+  display: none !important;
+}
+</style>
 <script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script defer="defer" id="fluttering_ribbon" mobile="ture" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,196,182" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
