@@ -302,42 +302,11 @@ btf.addGlobalFn('pjaxSend', () => {
   } else {
     window.loadOtherComment = loadDisqus
   }
-})()</script></div><style>
-/* 篮球主题播放器 */
-.aplayer.aplayer-fixed {
-  bottom: 20px !important;
-  right: 20px !important;
-  left: auto !important;
-}
+})()</script></div><!-- 正确的CDN链接 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
 
-.aplayer.aplayer-fixed.aplayer-mini .aplayer-body {
-  background: linear-gradient(135deg, #006BB6, #1E4287); /* 勇士队配色 */
-  border: 2px solid #FFC72C; /* 湖人金边框 */
-  box-shadow: 0 4px 20px rgba(0,107,182,0.4);
-}
-
-/* 添加篮球图标 */
-.aplayer.aplayer-fixed.aplayer-mini .aplayer-body::before {
-  content: "🏀";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  opacity: 0.9;
-}
-
-/* 隐藏默认播放图标 */
-.aplayer.aplayer-fixed.aplayer-mini .aplayer-button {
-  opacity: 0;
-}
-
-/* 悬停时显示控制按钮 */
-.aplayer.aplayer-fixed.aplayer-mini:hover .aplayer-body::before {
-  opacity: 0;
-}
-.aplayer.aplayer-fixed.aplayer-mini:hover .aplayer-button {
-  opacity: 1;
-}
-</style>
+<!-- 播放器 -->
+<meting-js server="netease" type="song" id="2737401613" fixed="true" mini="true"></meting-js>
 <script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="true" data-click="true"></script><script defer="defer" id="fluttering_ribbon" mobile="ture" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,196,182" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
